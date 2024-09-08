@@ -6,6 +6,8 @@ namespace GenshinImpactMovementSystem
 {
     public class PlayerWalking : PlayerMovementState
     {
-        
+        public PlayerWalking(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
+        {
+        }
     }
 }
