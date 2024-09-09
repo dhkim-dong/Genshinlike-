@@ -8,6 +8,9 @@ namespace GenshinImpactMovementSystem
     public class Player : MonoBehaviour
     {
         public Rigidbody Rigidbody { get; private set; }
+
+        public Transform MainCameraTransform { get; private set; }
+
         public PlayerInput Input { get; private set; }
         private PlayerMovementStateMachine movementStateMachine;
 
@@ -15,6 +18,7 @@ namespace GenshinImpactMovementSystem
         {
             Rigidbody = GetComponent<Rigidbody>();
             Input = GetComponent<PlayerInput>();
+            MainCameraTransform = Camera.main.transform; // 캐싱하는 이유 : Camera.main을 찾는데 비용이 많이 사용되기 때문이다.
             movementStateMachine = new PlayerMovementStateMachine(this);
         }
 
