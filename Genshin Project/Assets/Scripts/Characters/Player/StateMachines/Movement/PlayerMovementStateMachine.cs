@@ -11,6 +11,7 @@ namespace GenshinImpactMovementSystem
         // private set : can be set from everywhere inside that class : 클래스 내부에서만 set가능
 
         public Player Player { get; }
+        public PlayerStateReusableData ReusableData { get; }
 
         public PlayerIdleState IdleState { get; }  
         public PlayerWalking WalkState { get; }  
@@ -20,6 +21,8 @@ namespace GenshinImpactMovementSystem
         public PlayerMovementStateMachine(Player player) // Caching 으로 구현
         {
             Player = player;
+            ReusableData = new PlayerStateReusableData();
+
             IdleState = new PlayerIdleState(this);
 
             WalkState = new PlayerWalking(this);

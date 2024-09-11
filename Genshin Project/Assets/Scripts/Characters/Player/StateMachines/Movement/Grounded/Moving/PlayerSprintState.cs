@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GenshinImpactMovementSystem
 {
-    public class PlayerSprintState : PlayerMovementState
+    public class PlayerSprintState : PlayerMovingState
     {
         public PlayerSprintState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {

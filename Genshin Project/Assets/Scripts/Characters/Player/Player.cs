@@ -7,6 +7,9 @@ namespace GenshinImpactMovementSystem
     [RequireComponent(typeof(PlayerInput))]
     public class Player : MonoBehaviour
     {
+        [field:Header("Reference")]
+        [field:SerializeField] public PlayerSO Data { get; private set; }
+        
         public Rigidbody Rigidbody { get; private set; }
 
         public Transform MainCameraTransform { get; private set; }
