@@ -138,7 +138,7 @@ namespace GenshinImpactMovementSystem
 
         protected float GetMovementSpeed()
         {
-            return movementData.BaseSpeed * stateMachine.ReusableData.MovementSpeedModifier;
+            return movementData.BaseSpeed * stateMachine.ReusableData.MovementSpeedModifier * stateMachine.ReusableData.MovementOnSlopeSpeedModifier;
         }
         protected Vector3 GetPlayerHorizontalVelocity()
         {
@@ -147,6 +147,11 @@ namespace GenshinImpactMovementSystem
             PlayerHorizontalVelocity.y = 0f;
 
             return PlayerHorizontalVelocity;
+        }
+
+        protected Vector3 GetPlayerVerticalVelocity()
+        {
+            return new Vector3(0f, stateMachine.Player.Rigidbody.velocity.y, 0f);
         }
 
         protected void RotateTowardsTargetRotation()
