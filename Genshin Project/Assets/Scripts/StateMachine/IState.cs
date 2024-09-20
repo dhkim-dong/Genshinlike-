@@ -14,5 +14,8 @@ namespace GenshinImpactMovementSystem
         public void Update(); // Monobehaviour¿« Update
 
         public void PhysicsUpdate(); // FixedUpdate
+        public void OnAnimationEnterEvent();
+        public void OnAnimationExitEvent();
+        public void OnAnimationTranstionEvent();
     }
 }

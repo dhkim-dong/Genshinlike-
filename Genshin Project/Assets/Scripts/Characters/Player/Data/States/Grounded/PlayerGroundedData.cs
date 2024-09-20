@@ -15,5 +15,6 @@ namespace GenshinImpactMovementSystem
         [field: SerializeField] public PlayerRotationData BaseRotationData { get; private set; }
         [field: SerializeField] public PlayerWalkData WalkData { get; private set; }
         [field: SerializeField] public PlayerRunData RunData { get; private set; }
+        [field: SerializeField] public PlayerDashData DashData { get; private set; }
     }
 }
